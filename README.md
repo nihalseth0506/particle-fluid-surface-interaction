@@ -3,9 +3,9 @@
 
 ## Overview
 
-This project presents a **modular simulation framework for modeling particle motion under gravity, fluid flow, and surface interaction** using MATLAB.
+This project presents a modular simulation framework for modeling particle motion under gravity, fluid flow, and surface interaction using MATLAB.
 
-The system is formulated as a **hybrid dynamical system**, combining:
+The system is formulated as a hybrid dynamical system, combining:
 - continuous particle dynamics governed by differential equations, and
 - discrete contact events that instantaneously modify the system state.
 
@@ -20,14 +20,16 @@ The repository is organized into self-contained parts:
 - **Part 1 – Baseline Model**  
   Fundamental 2D particle motion with gravity, drag, and surface contact, serving as the reference implementation.
 
-Future extensions will build upon this foundation and explore:
-- alternative contact and deposition models  
-- numerical solver comparisons and parameter sweeps  
-- system-level modeling in Simulink  
-- control of particle transport via airflow  
-- statistical and multi-particle behavior  
+- **Part 2 – Contact Models and Deposition**  
+  Comparison of velocity-based and energy-based particle–wall interaction models, including irreversible deposition via terminal (absorbing) states.
 
-Each part is developed independently to preserve clarity and reproducibility.
+Planned future extensions include:
+- parameter sweeps and sensitivity analysis  
+- probabilistic and multi-particle deposition modeling  
+- flow-based control of particle transport  
+- system-level hybrid modeling in Simulink  
+
+Each part is developed independently to preserve clarity, interpretability, and reproducibility.
 
 ---
 
@@ -39,13 +41,13 @@ Particle–fluid–surface interaction plays a critical role in many engineering
 - fluid-driven material handling  
 - hybrid dynamical systems with contact constraints  
 
-This project focuses on **understanding the modeling assumptions and numerical behavior** underlying such systems before introducing higher-fidelity complexity.
+This project focuses on understanding the modeling assumptions and numerical behavior underlying such systems before introducing higher-fidelity complexity.
 
 ---
 
 ## Implementation
 
-The simulations are implemented in **MATLAB**, with a clean separation between:
+The simulations are implemented in MATLAB, with a clean separation between:
 - physical parameters  
 - continuous dynamics  
 - discrete contact logic  
