@@ -34,11 +34,21 @@ The repository is organized into independent parts, each building conceptually o
   - time-to-deposition analysis, and
   - multi-particle ensemble statistics.
 
+- **Part 4 – Flow-Controlled Transport & Feedback Control**  
+  Integration of control-system concepts to actively guide particle transport prior to deposition:
+  - open-loop flow actuation,
+  - proportional (P), proportional–integral (PI), and PID feedback control,
+  - spatially varying adhesion (capture zones),
+  - actuator saturation and anti-windup logic, and
+  - stochastic flow disturbances using time-correlated noise models.
+
+  This part demonstrates how control and surface physics interact in hybrid particle systems.
+
 Planned future extensions include:
-- flow-controlled particle transport and targeting  
-- control-system integration (feedback, actuation, stability analysis)  
+- fully coupled multi-particle transport under shared flow fields  
+- interaction-driven stochastic behavior and emergent dynamics  
 - parameter sensitivity and uncertainty quantification  
-- full hybrid system modeling in Simulink  
+- **system-level hybrid modeling in Simulink**
 
 Each part is developed independently to preserve clarity, interpretability, and reproducibility.
 
@@ -48,8 +58,9 @@ Each part is developed independently to preserve clarity, interpretability, and 
 
 Particle–fluid–surface interaction plays a critical role in many engineering and scientific domains, including:
 - aerosol and particulate transport  
-- surface contamination and deposition  
+- surface contamination and fouling  
 - fluid-driven material handling  
+- filtration and capture systems  
 - micro- and macro-scale hybrid dynamical systems  
 
 This project focuses on **understanding modeling assumptions, numerical behavior, and physical interpretation** before introducing higher-fidelity complexity.
@@ -61,31 +72,35 @@ This project focuses on **understanding modeling assumptions, numerical behavior
 The simulations are implemented in MATLAB with a clear separation between:
 - physical parameters,
 - continuous particle dynamics,
-- discrete contact and deposition logic, and
+- discrete contact and deposition logic,
+- control laws and actuation, and
 - numerical time integration.
 
 Key design principles include:
 - explicit state representation,
 - transparent event handling,
 - minimal hidden assumptions, and
-- extensibility toward higher dimensions and control-oriented formulations.
+- extensibility toward control-oriented and system-level formulations.
 
 This structure enables straightforward extension to:
-- alternative solvers,
-- statistical modeling,
-- multi-particle simulations, and
-- system-level architectures.
+- alternative numerical solvers,
+- statistical and Monte Carlo modeling,
+- ensemble and population-based simulations, and
+- Simulink-based hybrid architectures.
 
 ---
 
 ## Status
 
-Parts 1–3 establish a complete foundation for:
+Parts **1–4** establish a complete foundation for:
 - hybrid dynamical modeling,
-- physically grounded deposition behavior, and
-- statistical particle–surface interaction analysis.
+- physically grounded deposition behavior,
+- statistical particle–surface interaction analysis, and
+- feedback-controlled particle transport under uncertainty.
 
-The framework is now prepared for **control engineering extensions and Simulink-based system modeling**.
+The framework is now prepared for:
+- **large-scale multi-particle simulations**, and
+- **Simulink-based hybrid system modeling** in the next phase.
 
 ---
 
