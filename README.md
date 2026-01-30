@@ -44,8 +44,17 @@ The repository is organized into independent parts, each building conceptually o
 
   This part demonstrates how control and surface physics interact in hybrid particle systems.
 
+- **Part 5 – Multi-Particle Transport & Population Statistics**  
+  Extension from single-particle dynamics to **population-level modeling under shared flow fields**:
+  - simultaneous simulation of multiple particles,
+  - shared open-loop and feedback-controlled flow actuation,
+  - probabilistic deposition at the particle level,
+  - Monte Carlo experiments across repeated runs, and
+  - statistical analysis of deposition fraction, deposition time, and spatial clustering.
+
+  This part highlights variability, robustness, and reliability of controlled particle transport.
+
 Planned future extensions include:
-- fully coupled multi-particle transport under shared flow fields  
 - interaction-driven stochastic behavior and emergent dynamics  
 - parameter sensitivity and uncertainty quantification  
 - **system-level hybrid modeling in Simulink**
@@ -92,15 +101,16 @@ This structure enables straightforward extension to:
 
 ## Status
 
-Parts **1–4** establish a complete foundation for:
+Parts **1–5** establish a complete foundation for:
 - hybrid dynamical modeling,
 - physically grounded deposition behavior,
-- statistical particle–surface interaction analysis, and
-- feedback-controlled particle transport under uncertainty.
+- statistical particle–surface interaction analysis,
+- feedback-controlled particle transport under uncertainty, and
+- population-level robustness and reliability assessment.
 
 The framework is now prepared for:
-- **large-scale multi-particle simulations**, and
-- **Simulink-based hybrid system modeling** in the next phase.
+- **system-level hybrid modeling in Simulink**, and
+- higher-level integration of control, uncertainty, and large-scale dynamics.
 
 ---
 
