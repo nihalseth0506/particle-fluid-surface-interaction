@@ -1,0 +1,3 @@
+*.html linguist-vendored
+*.m linguist-language=MATLAB
+*.py linguist-language=Python
